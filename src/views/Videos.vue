@@ -22,7 +22,7 @@
             <v-col cols="12" sm="6" md="3"  v-for="(video,j) in folder.videos.filter( (x) => JSON.stringify(x).toLowerCase().match(search ? search.toLowerCase() : '') )" :key="j">
               <v-card  style="height: 100%" :to="`/videos/${video.video}`">
                 <v-img
-                  max-height="100"
+                  max-height="150"
                   width="100%"
                   :src="`https://d4zgr4aptyy2e.cloudfront.net/${video.video}.0000001.jpg`"
                 ></v-img>
