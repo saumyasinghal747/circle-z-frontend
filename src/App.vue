@@ -36,7 +36,7 @@
 	  <v-list-item-icon><v-icon>mdi-calendar</v-icon></v-list-item-icon>
           <v-list-item-title>Calendar</v-list-item-title>
         </v-list-item>
-        <v-list-item href="https://calendar.google.com/calendar/ical/qahdd4ntr7vv59k4sp715bqq6k%40group.calendar.google.com/private-dc65e074a46a31d7495a8ecd87636653/basic.ics">
+        <v-list-item target="_blank" href="https://calendar.google.com/calendar/ical/qahdd4ntr7vv59k4sp715bqq6k%40group.calendar.google.com/private-dc65e074a46a31d7495a8ecd87636653/basic.ics">
 	  <v-list-item-icon><v-icon>mdi-google</v-icon></v-list-item-icon>
           <v-list-item-title>Google Calendar</v-list-item-title>
         </v-list-item>
@@ -124,6 +124,25 @@
 	    <v-list-item-icon><v-icon>mdi-bank</v-icon></v-list-item-icon>
             <v-list-item-title>Auditorium</v-list-item-title>
           </v-list-item>
+          <v-list-item
+	    v-if="profile.isStaff"
+	    target="_blank"
+	    href="https://rossprogram-org.zoom.us/j/94283884786">
+	    <v-list-item-icon><v-icon>mdi-numeric-1-box</v-icon></v-list-item-icon>
+            <v-list-item-title>Counselor Grading Room</v-list-item-title>
+          </v-list-item>
+          <v-list-item
+	    target="_blank"
+	    href="https://rossprogram-org.zoom.us/j/96986251680">
+	    <v-list-item-icon><v-icon>mdi-numeric-2-box</v-icon></v-list-item-icon>
+            <v-list-item-title>Camper Collaboration</v-list-item-title>
+          </v-list-item>
+          <v-list-item
+	    target="_blank"
+	    href="https://rossprogram-org.zoom.us/j/97595923102">
+	    <v-list-item-icon><v-icon>mdi-numeric-3-box</v-icon></v-list-item-icon>
+            <v-list-item-title>JC Room</v-list-item-title>
+          </v-list-item>
 	  <v-list-item >
             <v-list-item-title>Room
 	    <v-btn v-for="(id, index) in roomIds"
@@ -131,7 +150,7 @@
 		   target="_blank"
 		   :href="`https://rossprogram-org.zoom.us/j/${id}`"
 		   icon>
-	      <v-icon>mdi-numeric-{{ index + 1}}-box</v-icon>
+	      <v-icon>mdi-numeric-{{ index + 4}}-box</v-icon>
 	    </v-btn>
 	    </v-list-item-title>
 	  </v-list-item>
@@ -168,7 +187,7 @@
 	      <v-list-item-icon><v-icon>mdi-account-check</v-icon></v-list-item-icon>
             <v-list-item-title>Reports</v-list-item-title>
           </v-list-item>
-          <v-list-item href="https://store.rossprogram.org/collections/all">
+          <v-list-item target="_blank" href="https://store.rossprogram.org/collections/all">
 	      <v-list-item-icon><v-icon>mdi-tshirt-crew</v-icon></v-list-item-icon>
             <v-list-item-title>Merchandise</v-list-item-title>
           </v-list-item>
@@ -217,9 +236,6 @@ name: 'App',
     return {
       roomIds:
       [
-	'94283884786',
-	'96986251680',
-	'97595923102',
 	'95661678187',
 	'95145772227',
 	'95005886358',
