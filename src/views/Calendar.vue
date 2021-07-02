@@ -38,7 +38,7 @@
           <v-card-title>{{selectedEvent.event.summary}}</v-card-title>
           <v-card-subtitle>{{ selectedEvent.date | moment('MMMM Do YYYY, h:mma Z') }}, which is maybe {{ selectedEvent.date | moment("from", "now") }}</v-card-subtitle>
           <v-card-text>
-          <div :v-html="selectedEvent.event.description">
+          <div v-html="selectedEvent.event.description">
           </div>
           </v-card-text>
           <v-list one-line>
